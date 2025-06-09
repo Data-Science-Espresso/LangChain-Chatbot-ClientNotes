@@ -1,0 +1,42 @@
+🧩 Problem Summary
+A new error appeared in the Domain Management section of the marketing automation platform (Pardot/MCAE). The SSL Status of a tracker domain (e.g., grow.example.com) was marked as "ERROR".
+
+It appeared as though the SSL certificate might have expired or been misconfigured.
+
+🔍 Initial Investigation
+The SSL certificate was checked using SSLShopper's SSL Checker (https://www.sslshopper.com/ssl-checker.html). 
+
+Results showed:
+- The certificate was valid and correctly installed.
+- It was set to expire in over 20 days.
+- Intermediate certificates were also present and complete.
+- The domain name matched the certificate.
+
+This indicated no technical issue on the domain or certificate level.
+
+🔎 Analysis
+Further research, including community insights (e.g., Salesforce Trailblazer forums), suggests:
+- The SSL Status: ERROR is often caused by a known platform-side issue where Salesforce’s internal certificate check process gets stuck or fails to update.
+- This issue does not indicate an actual SSL failure.
+- Only Salesforce Support can reset the SSL status using an internal backend tool.
+
+--> https://trailhead.salesforce.com/trailblazer-community/feed/0D54S00000FS1NoSAL
+
+✅ Solution
+A support ticket was opened with Salesforce, referencing this known issue.
+
+Salesforce confirmed that the problem was not related to the certificate itself, but due to a glitch in their internal validation system.
+They manually reset the SSL status on their end, and the domain now shows “Enabled” again in Domain Management.
+
+💡 Recommendation
+If this error reappears in the future:
+
+First verify the SSL certificate using an external checker (e.g., SSLShopper).
+
+If the certificate is valid and correctly configured, open a support ticket with Salesforce.
+
+Mention that this is a known system error and that the status needs to be manually reset on their side.
+
+📝 Important:
+SSL certificates are not managed within Pardot. They are hosted on the infrastructure of the web provider (e.g., CMS or hosting platform). Pardot only accesses and checks them periodically.
+
