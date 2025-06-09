@@ -9,3 +9,6 @@ Features
 ## Run it locally
 pip install -r requirements.txt
 streamlit run app.py
+
+☕ Comparison to Langflow: 
+☕ Installation Guide for LangChain and Ollama: https://sarahleaschrch.substack.com/p/step-by-step-guide-to-install-langchain
