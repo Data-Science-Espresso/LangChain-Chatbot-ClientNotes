@@ -10,5 +10,5 @@ Features
 pip install -r requirements.txt
 streamlit run app.py
 
-☕ Comparison to Langflow: 
+☕ Comparison to Langflow: https://medium.com/data-science-collective/langchain-vs-langflow-build-a-simple-llm-app-with-code-or-drag-drop-cbace40c12b1?sk=b5e4970bff791c8e1d80a22bc221a74b
 ☕ Installation Guide for LangChain and Ollama: https://sarahleaschrch.substack.com/p/step-by-step-guide-to-install-langchain
